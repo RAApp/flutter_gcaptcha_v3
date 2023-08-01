@@ -30,7 +30,7 @@ class ReCaptchaWebView extends StatelessWidget {
         onTokenReceived(message.message);
       });
 
-    controller.loadRequest(Uri.parse(url)).then((value) =>
+    controller.loadFlutterAsset(url).then((value) =>
         Future.delayed(const Duration(seconds: 3))
             .then((value) => _initializeReadyJs(controller)));
   }
